@@ -9,6 +9,8 @@ def start_client():
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as client_socket:
         client_socket.connect((SERVER_HOST, SERVER_PORT))
         
+
+        #test
         # Client interaction loop
         while True:
             # Display the menu and get user input
