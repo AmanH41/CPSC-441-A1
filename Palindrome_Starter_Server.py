@@ -1,7 +1,9 @@
 import socket
 import threading
 import logging
+import re 
 from collections import Counter
+
 
 # Set up basic logging configuration
 logging.basicConfig(filename='server_log.txt', level=logging.INFO, format='%(asctime)s - %(message)s')
@@ -31,6 +33,7 @@ def handle_client(client_socket, client_address):
         # Close the client connection
         client_socket.close()
         logging.info(f"Closed connection with {client_address}")
+        exit()
 
 def process_request(request_data):
     """ Process the client's request and generate a response. """
@@ -41,10 +44,64 @@ def process_request(request_data):
     if check_type == 'simple':
         result = is_palindrome(input_string)
         return f"Is palindrome: {result}"
+    elif check_type == "complex":
+        can_form, result = is_complexPalindrome(input_string)
+        #return f"Can form palindrome: {can_from}"
+        return f"\nCan form palindrom: {can_form}\nNumber of swaps: {result}"
+
+
 
 def is_palindrome(input_string):
+    ##python module to remove white space and special char 
+    input_string = re.sub(r'[^a-zA-Z0-9]', '', input_string).lower()
     """ Check if the given string is a palindrome. """
-    return input_string == input_string[::-1]
+    return input_string == input_string[::-1]  ## return true or false if string is palindrome 
+
+def can_form_palindrome(input_string):
+    #Check if the string can be rearranged into a palindrome.
+    # Count the frequency of each character
+    char_counts = Counter(input_string)
+    # Count how many characters have an odd frequency
+    odd_counts = sum(1 for count in char_counts.values() if count % 2 != 0)
+    # A string can form a palindrome if at most one character has an odd count
+    return odd_counts <= 1 
+
+
+def is_complexPalindrome(input_string):
+    """Calculate the minimum number of swaps to convert the string into a palindrome."""
+    if not can_form_palindrome(input_string):
+        return False, 0  # Cannot form a palindrome
+
+    # Convert the string to a list for easier manipulation
+    s = list(input_string)
+    n = len(s)
+    swaps = 0
+
+    # Two-pointer approach
+    left, right = 0, n - 1  #left pointer at the beginning and right pointer at the end of string  
+    while left < right:
+        # If characters match, move both pointers
+        if s[left] == s[right]:
+            left += 1
+            right -= 1
+        else:
+            # Find the matching character from the right
+            mid = right
+            while mid > left and s[mid] != s[left]:
+                mid -= 1
+            # If no matching character found, it's already a palindrome
+            if mid == left:
+                s[left], s[left + 1] = s[left + 1], s[left]
+                swaps += 1
+            else:
+                # Swap characters to make s[left] == s[right]
+                for i in range(mid, right):
+                    s[i], s[i + 1] = s[i + 1], s[i]
+                    swaps += 1
+                left += 1
+                right -= 1
+
+    return True, swaps
 
 def start_server():
     """ Start the server and listen for incoming connections. """
