@@ -45,9 +45,9 @@ def process_request(request_data):
         result = is_palindrome(input_string)
         return f"Is palindrome: {result}"
     elif check_type == "complex":
-        can_form, result = is_complexPalindrome(input_string)
+        can_form, swaps,result = is_complexPalindrome(input_string)
         #return f"Can form palindrome: {can_from}"
-        return f"\nCan form palindrom: {can_form}\nNumber of swaps: {result}"
+        return f"\nCan form palindrom: {can_form}\nNumber of swaps: \nPalindrome: {result}"
 
 
 
@@ -100,8 +100,10 @@ def is_complexPalindrome(input_string):
                     swaps += 1
                 left += 1
                 right -= 1
+    
+    palindrome =''.join(map(str,s))
 
-    return True, swaps
+    return True, swaps, palindrome
 
 def start_server():
     """ Start the server and listen for incoming connections. """
