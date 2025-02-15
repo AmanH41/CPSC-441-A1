@@ -47,7 +47,7 @@ def process_request(request_data):
     elif check_type == "complex":
         can_form, swaps,result = is_complexPalindrome(input_string)
         #return f"Can form palindrome: {can_from}"
-        return f"\nCan form palindrom: {can_form}\nNumber of swaps: \nPalindrome: {result}"
+        return f"\nCan form palindrom: {can_form}\nNumber of swaps: {swaps}\nPalindrome: {result}"
 
 
 
@@ -68,7 +68,7 @@ def can_form_palindrome(input_string):
 
 
 def is_complexPalindrome(input_string):
-    """Calculate the minimum number of swaps to convert the string into a palindrome."""
+    ##double check if a palindrome can be made 
     if not can_form_palindrome(input_string):
         return False, 0  # Cannot form a palindrome
 
@@ -79,16 +79,16 @@ def is_complexPalindrome(input_string):
 
     # Two-pointer approach
     left, right = 0, n - 1  #left pointer at the beginning and right pointer at the end of string  
-    while left < right:
+    while left < right: 
         # If characters match, move both pointers
-        if s[left] == s[right]:
+        if s[left] == s[right]:   
             left += 1
             right -= 1
         else:
             # Find the matching character from the right
             mid = right
-            while mid > left and s[mid] != s[left]:
-                mid -= 1
+            while mid > left and s[mid] != s[left]:     ##ensures alg keeps going
+                mid -= 1                               #move mid pointer left until left == mid 
             # If no matching character found, it's already a palindrome
             if mid == left:
                 s[left], s[left + 1] = s[left + 1], s[left]

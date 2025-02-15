@@ -56,3 +56,101 @@ Palindrome: ['b', 'b', 'a', 'a', 'b', 'b']
 2025-02-14 03:28:43,507 - Received request: simple|asdasd
 2025-02-14 03:28:43,507 - Sent response: Is palindrome: False
 2025-02-14 03:28:43,507 - Closed connection with ('127.0.0.1', 62353)
+2025-02-14 03:30:48,110 - Server started and listening on localhost:12345
+2025-02-14 03:30:49,852 - Connection from ('127.0.0.1', 62485)
+2025-02-14 03:30:52,170 - Connection from ('127.0.0.1', 62486)
+2025-02-14 03:30:52,170 - Received request: complex|asdasd
+2025-02-14 03:30:52,170 - Sent response: 
+Can form palindrom: True
+Number of swaps: 
+Palindrome: asddsa
+2025-02-14 03:30:52,170 - Closed connection with ('127.0.0.1', 62486)
+2025-02-14 18:43:32,980 - Server started and listening on localhost:12345
+2025-02-14 18:44:26,693 - Connection from ('127.0.0.1', 53651)
+2025-02-14 18:44:35,135 - Connection from ('127.0.0.1', 53655)
+2025-02-14 18:44:35,135 - Received request: complex|aabb
+2025-02-14 18:44:35,135 - Sent response: 
+Can form palindrom: True
+Number of swaps: 
+Palindrome: abba
+2025-02-14 18:44:35,136 - Closed connection with ('127.0.0.1', 53655)
+2025-02-14 18:44:56,274 - Connection from ('127.0.0.1', 53662)
+2025-02-14 18:44:56,292 - Received request: complex|aabb
+2025-02-14 18:44:56,292 - Sent response: 
+Can form palindrom: True
+Number of swaps: 
+Palindrome: abba
+2025-02-14 18:44:56,292 - Closed connection with ('127.0.0.1', 53662)
+2025-02-14 18:45:35,558 - Server started and listening on localhost:12345
+2025-02-14 18:45:37,833 - Connection from ('127.0.0.1', 53682)
+2025-02-14 18:45:46,753 - Connection from ('127.0.0.1', 53688)
+2025-02-14 18:45:46,753 - Received request: complex|ivicc
+2025-02-14 18:45:46,753 - Sent response: 
+Can form palindrom: True
+Number of swaps: 3
+Palindrome: icvci
+2025-02-14 18:45:46,753 - Closed connection with ('127.0.0.1', 53688)
+2025-02-14 18:48:46,958 - Connection from ('127.0.0.1', 53765)
+2025-02-14 18:48:46,980 - Received request: complex|aa
+2025-02-14 18:48:46,980 - Sent response: 
+Can form palindrom: True
+Number of swaps: 0
+Palindrome: aa
+2025-02-14 18:48:46,980 - Closed connection with ('127.0.0.1', 53765)
+2025-02-14 18:48:54,765 - Connection from ('127.0.0.1', 53769)
+2025-02-14 18:48:54,775 - Received request: complex|ava
+2025-02-14 18:48:54,775 - Sent response: 
+Can form palindrom: True
+Number of swaps: 0
+Palindrome: ava
+2025-02-14 18:48:54,776 - Closed connection with ('127.0.0.1', 53769)
+2025-02-14 18:48:59,396 - Connection from ('127.0.0.1', 53771)
+2025-02-14 18:48:59,411 - Received request: complex|avvaa
+2025-02-14 18:48:59,411 - Sent response: 
+Can form palindrom: True
+Number of swaps: 1
+Palindrome: avava
+2025-02-14 18:48:59,412 - Closed connection with ('127.0.0.1', 53771)
+2025-02-14 19:03:14,256 - Closed connection with ('127.0.0.1', 53682)
+2025-02-14 19:03:20,594 - Server started and listening on localhost:12345
+2025-02-14 19:03:29,097 - Connection from ('127.0.0.1', 54317)
+2025-02-14 19:03:33,848 - Connection from ('127.0.0.1', 54321)
+2025-02-14 19:03:33,848 - Received request: simple|aabb
+2025-02-14 19:03:33,848 - Sent response: Is palindrome: False
+2025-02-14 19:03:33,848 - Closed connection with ('127.0.0.1', 54321)
+2025-02-14 19:03:48,307 - Connection from ('127.0.0.1', 54326)
+2025-02-14 19:03:48,325 - Received request: simple|aba
+2025-02-14 19:03:48,325 - Sent response: Is palindrome: True
+2025-02-14 19:03:48,325 - Closed connection with ('127.0.0.1', 54326)
+2025-02-14 19:04:06,330 - Connection from ('127.0.0.1', 54333)
+2025-02-14 19:04:06,347 - Received request: simple|abcdcba
+2025-02-14 19:04:06,347 - Sent response: Is palindrome: True
+2025-02-14 19:04:06,348 - Closed connection with ('127.0.0.1', 54333)
+2025-02-14 19:04:22,875 - Connection from ('127.0.0.1', 54342)
+2025-02-14 19:04:22,895 - Received request: complex|ivicc
+2025-02-14 19:04:22,895 - Sent response: 
+Can form palindrom: True
+Number of swaps: 3
+Palindrome: icvci
+2025-02-14 19:04:22,895 - Closed connection with ('127.0.0.1', 54342)
+2025-02-14 19:04:54,165 - Connection from ('127.0.0.1', 54355)
+2025-02-14 19:04:54,189 - Received request: complex|aacbbdd
+2025-02-14 19:04:54,189 - Sent response: 
+Can form palindrom: True
+Number of swaps: 9
+Palindrome: abdcdba
+2025-02-14 19:04:54,190 - Closed connection with ('127.0.0.1', 54355)
+2025-02-14 19:05:27,884 - Closed connection with ('127.0.0.1', 54317)
+2025-02-14 19:06:20,810 - Connection from ('127.0.0.1', 54392)
+2025-02-14 19:06:23,140 - Connection from ('127.0.0.1', 54394)
+2025-02-14 19:06:30,539 - Connection from ('127.0.0.1', 54401)
+2025-02-14 19:06:30,540 - Received request: simple|asdasdasdaw
+2025-02-14 19:06:30,540 - Sent response: Is palindrome: False
+2025-02-14 19:06:30,540 - Closed connection with ('127.0.0.1', 54401)
+2025-02-14 19:06:40,964 - Connection from ('127.0.0.1', 54407)
+2025-02-14 19:06:40,964 - Received request: complex|aahhjjw
+2025-02-14 19:06:40,964 - Sent response: 
+Can form palindrom: True
+Number of swaps: 9
+Palindrome: ahjwjha
+2025-02-14 19:06:40,964 - Closed connection with ('127.0.0.1', 54407)
